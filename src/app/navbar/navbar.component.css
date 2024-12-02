@@ -1,0 +1,181 @@
+.block {
+   width: 200px;
+   cursor: pointer;
+   font-size: 3vw;
+   color: gray;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.block img{
+   width: 30px;
+}
+
+
+
+.block3 {
+   cursor: pointer;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.block3 img {
+   width: 200px;
+   height: auto;
+   display: block;
+   object-fit: contain;
+   transition:1s ease;
+   
+}
+
+.blocks {
+   cursor: pointer;
+   color: white;
+   font-size: 1.5vw;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.blocks:hover{
+   color: gray;
+   
+}
+
+.container {
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: nowrap;
+}
+
+.navbar {
+   padding: 0;
+   background-color: black;
+   position: relative; 
+   z-index: 1; 
+}
+
+.cart{
+   font-size:x-large;
+   color: white;
+}
+
+.active {
+   color: gray;
+}
+
+.bar-container {
+  
+   width: 100%;
+   height: 100%;
+   background-size:cover ;
+   background-image: url("/assets/vecteezy_scary-texture-background-image-red-scratch-texture_22995456.jpg");
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+   opacity: 0;
+   pointer-events: none; 
+   transition: opacity 0.3s ease;
+}
+
+.bar-container.visible {
+   opacity: 1;
+   pointer-events: auto; 
+}
+
+.xmark {
+   color: white;
+   flex-direction: column-reverse;
+   font-size:200%;
+   cursor: pointer;
+   
+}
+
+.bar-navbar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   
+  
+}
+
+.bar-navbar .block3 img{
+   max-width: 100%;
+   height: auto;
+   
+   object-fit: contain;
+
+}
+
+
+
+
+@media screen and (max-width:1250px){
+   .blocks{
+      display: none;
+      opacity: 0;
+   }
+   .block{
+      width: auto;
+   }
+}
+@media screen and (max-width:1000px){
+.xmark span{
+   display: none;
+   
+}
+
+.block3 img{
+   width: 150px;
+   
+}
+}
+.burgerbar-container{
+margin: auto auto;
+   width: 80vw;
+  
+   /* background-color: rgb(40, 40, 40); */
+}
+
+.bar-inp {
+   border: none;
+   background-color: transparent;
+   border-bottom: 2px solid white; 
+   padding: 8px 4px; 
+   color: white;
+   font-size: 1rem;
+   flex: 1;
+   outline: none;
+   box-sizing: border-box; 
+}
+
+
+
+
+
+.search-btn {
+   border: none;
+   border-bottom: 2px solid white; 
+   font-size: 1.5rem; 
+   color: white;
+   background: transparent;
+   padding: 8px; 
+   line-height: 1; 
+   cursor: pointer; 
+}
+
+
+.search-bar {
+   display: flex;
+   align-items: center;
+   gap: 0; 
+   width: 100%; 
+}

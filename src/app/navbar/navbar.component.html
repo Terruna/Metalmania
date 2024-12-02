@@ -1,0 +1,40 @@
+<div class="navbar">
+    <div class="container">
+        <div class="block" [ngClass]="{'visible': !isSecondDivVisible}" (click)="showSecondDiv()">
+           
+            <img [src]="menuimg" alt="">
+        </div>
+        
+        <div class="blocks" routerLink="bands" routerLinkActive="active">Bands</div>
+        <div class="block3" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <img [src]="img" alt="">
+        </div>
+        <div class="blocks" routerLink="guitars" routerLinkActive="active">Guitars</div>
+        <div class="blocks" routerLink="accessories" routerLinkActive="active">Accessories</div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+</div>
+
+<div class="bar-container" [ngClass]="{'visible': isSecondDivVisible}">
+    <div class="bar-navbar">
+        <div class="xmark" [ngClass]="{'hidden': !isSecondDivVisible}" (click)="hideSecondDiv()">
+            <i class="fa-solid fa-xmark"></i>
+            <span>Close</span> 
+        </div>
+        <div class="block3" [ngClass]="{'hidden': !isSecondDivVisible}" (click)="hideSecondDiv()" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <img [src]="img" alt="">
+        </div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+        </div>
+    </div>
+
+    <div class="burgerbar-container">
+        <div class="search-bar">
+            <input class="bar-inp" type="text" placeholder="Search 'em Heavy">
+            <i class="fa-solid fa-magnifying-glass search-btn"></i>
+        </div>
+        </div>
+</div>
