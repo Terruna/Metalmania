@@ -56,9 +56,11 @@
 
 .navbar {
    padding: 0;
-   background-color: black;
+   background-image: url("/assets/vecteezy_scary-texture-background-image-red-scratch-texture_22995456.jpg");
    position: relative; 
    z-index: 1; 
+   border-bottom: 2px solid white;
+   
 }
 
 .cart{
@@ -155,9 +157,12 @@ margin: auto auto;
    flex: 1;
    outline: none;
    box-sizing: border-box; 
+   
 }
 
-
+.bar-inp::placeholder{
+   color: white;
+}
 
 
 
