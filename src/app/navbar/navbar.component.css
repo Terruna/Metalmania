@@ -1,5 +1,7 @@
+
+
 .block {
-   width: 200px;
+   width: 20px;
    cursor: pointer;
    font-size: 3vw;
    color: gray;
@@ -10,6 +12,7 @@
 .block img{
    width: 30px;
 }
+
 
 
 
@@ -60,12 +63,16 @@
    position: relative; 
    z-index: 1; 
    border-bottom: 2px solid white;
+   background-size: cover;
+   
+
    
 }
 
 .cart{
    font-size:x-large;
    color: white;
+  
 }
 
 .active {
@@ -88,10 +95,19 @@
 }
 
 .bar-container.visible {
-   opacity: 1;
+    position: fixed; /* Ensure it's fixed and covers the screen */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden; /* Prevent scrolling inside the burger bar */
+    opacity: 1;
    pointer-events: auto; 
 }
-
+body.no-scroll {
+   overflow: hidden;
+}
 .xmark {
    color: white;
    flex-direction: column-reverse;
@@ -183,4 +199,8 @@ margin: auto auto;
    align-items: center;
    gap: 0; 
    width: 100%; 
+}
+
+.bar-container .cart{
+   width: 150px;
 }

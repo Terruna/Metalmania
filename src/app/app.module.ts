@@ -11,6 +11,7 @@ import { BandsComponent } from './bands/bands.component';
 import { GuitarsComponent } from './guitars/guitars.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
 import { ErrorComponent } from './error/error.component';
+import { ApparelComponent } from './apparel/apparel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ErrorComponent } from './error/error.component';
     BandsComponent,
     GuitarsComponent,
     AccessoriesComponent,
-    ErrorComponent
+    ErrorComponent,
+    ApparelComponent
   ],
   imports: [
     BrowserModule,

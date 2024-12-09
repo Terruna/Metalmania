@@ -8,11 +8,14 @@ import { GuitarsComponent } from './guitars/guitars.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
 import { SearchEngineComponent } from './search-engine/search-engine.component';
 import { ErrorComponent } from './error/error.component';
+import { ApparelComponent } from './apparel/apparel.component';
 
 const routes: Routes = [
+ 
   {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent},
   {path:"bands",component:BandsComponent},
+  {path:"apparel", component:ApparelComponent},
   {path:"guitars",component:GuitarsComponent},
   {path:"accessories",component:AccessoriesComponent},
   {path:"search",component:SearchEngineComponent},
