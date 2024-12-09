@@ -1,16 +1,57 @@
-.slide {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
+body {
+    background-color: #f8fafc;
   }
   
-  .rightArrow {
+  .container {
+    padding: 2rem;
+    background-color: rgb(0, 0, 0);
+  }
+  
+
+
+  .slider-wrapper {
+    position: relative;
+    max-width: 80rem; /* Increase the width to make the container bigger */
+    margin: 0 auto;
+    padding: 0 1rem; /* Add some padding around the container */
+  }
+  
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    width: 100%; /* Ensure the slider takes the full width of the wrapper */
+    height: 60vh; /* Set a specific height for the slider to make it taller */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;  /* Ensure images cover the container area without distortion */
+    object-position: center; /* Ensure the image is centered */
+  }
+  
+  .slide {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .rightArrow, .leftArrow {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    right: 32px;
     font-size: 45px;
     color: #fff;
     z-index: 1;
@@ -18,28 +59,40 @@
   }
   
   .leftArrow {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
     left: 32px;
-    font-size: 45px;
-    color: #fff;
-    z-index: 1;
-    cursor: pointer;
   }
   
-  .slider {
-    position: relative;
-    height: 100%;
+  .rightArrow {
+    right: 32px;
   }
   
-  .dotsContainer {
+  .slider-nav {
     display: flex;
-    justify-content: center;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
   
-  .dot {
-    margin: 0 3px;
+  .slider-nav .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
     cursor: pointer;
-    font-size: 20px;
   }
+  
+  .slider-nav .dot:hover {
+    opacity: 1;
+    background-color: rgb(158, 158, 158);
+  }
+  
+  .slider-nav .active {
+    opacity: 1;
+    background-color: rgb(158, 158, 158);
+  }
+  

@@ -1,1 +1,13 @@
-
+:host{
+ 
+    background-image: url("/assets/11.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensures it appears above other content */
+    background-color: white; /* Optional: Set background color to avoid transparency issues */
+   
+}

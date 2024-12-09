@@ -12,7 +12,7 @@ import { GuitarsComponent } from './guitars/guitars.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
 import { ErrorComponent } from './error/error.component';
 import { ApparelComponent } from './apparel/apparel.component';
-
+import { SliderModule } from './accessories/slider/slider.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { ApparelComponent } from './apparel/apparel.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SliderModule
   ],
   providers: [
     provideClientHydration()
